@@ -455,7 +455,7 @@ trait ElasticquentTrait
             'properties' => $instance->getMappingProperties(),
         );
 
-        $mapping['body'] = $params;
+        $mapping['body'][$instance->getTypeName()] = $params;
 
         return $instance->getElasticSearchClient()->indices()->putMapping($mapping);
     }
