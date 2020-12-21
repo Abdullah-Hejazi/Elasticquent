@@ -369,8 +369,7 @@ trait ElasticquentTrait
     public function getBasicEsParams($getIdIfPossible = true, $limit = null, $offset = null)
     {
         $params = array(
-            'index' => $this->getIndexName(),
-            'type' => $this->getTypeName(),
+            'index' => $this->getIndexName()
         );
 
         if ($getIdIfPossible && $this->getKey()) {
